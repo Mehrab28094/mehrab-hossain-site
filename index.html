@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehrab Hossain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #00264d, #660000);
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    header {
+      background: #003366;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header img.logo-large {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #001f33;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff6666;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    .hidden { display: none; }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+    footer {
+      text-align: center;
+      background: #001a33;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .logo-small {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/100x100.png?text=M" alt="Logo" class="logo-large">
+    <h1>Welcome to Mehrab Hossain</h1>
+    <img src="https://via.placeholder.com/30x30.png?text=M" alt="Logo Small" class="logo-small">
+  </header>
+
+  <main id="entry">
+    <section>
+      <h2>Enter to Explore</h2>
+      <form onsubmit="enterSite(event)">
+        <label>Your Name: <input type="text" id="username" required></label><br><br>
+        <label>Email: <input type="email" required></label><br><br>
+        <button type="submit">Enter Website</button>
+      </form>
+    </section>
+  </main>
+
+  <main id="siteContent" class="hidden">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#quotes">Motivation</a>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Mehrab Hossain, a dreamer and doer. I believe in turning ideas into reality and learning through every challenge life throws my way.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>I started my education in my hometown, completed college with good results, and now continuing my journey at university level.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>My Memories</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/200?text=Memory+1" alt="Smriti 1" />
+        <img src="https://via.placeholder.com/200?text=Memory+2" alt="Smriti 2" />
+        <img src="https://via.placeholder.com/200?text=Memory+3" alt="Smriti 3" />
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Details</h2>
+      <p>Phone: +8801719774498</p>
+      <p>Email: mehrabhossain2809@gmail.com</p>
+      <p>Facebook: <a href="https://www.facebook.com/share/1AJzfjtX5B/" target="_blank">Visit Profile</a></p>
+    </section>
+
+    <section id="quotes">
+      <h2>Motivational Quotes</h2>
+      <ul>
+        <li>"Believe in yourself, even when no one else does."</li>
+        <li>"Every setback is a setup for a comeback."</li>
+        <li>"Dream big. Work hard. Stay focused."</li>
+        <li>"Your only limit is your mind."</li>
+        <li>"Success is the result of preparation, hard work, and learning from failure."</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mehrab Hossain. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function enterSite(event) {
+      event.preventDefault();
+      const name = document.getElementById('username').value;
+      document.getElementById('entry').classList.add('hidden');
+      document.getElementById('siteContent').classList.remove('hidden');
+      document.querySelector('header h1').textContent = `Welcome, ${name} to Mehrab Hossain`;
+    }
+  </script>
+</body>
+</html>
